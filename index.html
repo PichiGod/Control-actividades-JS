@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Control de Actividades Diarias</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .activity-item{
+            margin-right: 10rem;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Control de Actividades Diarias</h1>
+    <h3>- Realizado por Jose Duarte</h3>
+    <form id="activity-form" >
+        <label for="description">Descripción:</label>
+        <input type="text" id="description" name="description" max="35" required><br>
+
+        <label for="days">Cantidad de Días:</label>
+        <input type="number" name="days" id="days" required><br>
+
+        <label for="start-date">Fecha de Inicio:</label>
+        <input type="date" id="start-date" name="start-date" required><br>
+
+        <label for="end-date">Fecha de Fin:</label>
+        <input type="date" id="end-date" name="end-date" required><br>
+
+        <label for="responsible">Responsable:</label>
+        <input type="text" id="responsible" name="responsible" max="50" required><br>
+
+        <button type="submit" id="add-activity">Agregar Actividad</button>
+    </form>
+
+    <div id="activity-list" style="margin-top: 3rem; margin-bottom: 3rem; display: flex; flex-wrap: wrap; border: 1px solid; padding: 10px; box-shadow: 5px 10px 18px #888888;">
+        <!-- Lista de actividades aquí -->
+    </div>
+
+    <script src="index.js"></script>
+    <script>
+        document.getElementById('activity-form').addEventListener('submit', postact);
+        
+    </script>
+
+</body>
+</html>
